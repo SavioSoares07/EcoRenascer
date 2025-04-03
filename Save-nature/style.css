@@ -8,7 +8,7 @@
     text-decoration: none;
     outline: none; border:none;
     text-transform: capitalize;
-    transition: all .3s cubic-bezier(.38,1.15,.7,1.12);
+    transition: all .2s cubic-bezier(.38,1.15,.7,1.12);
     font-weight: normal;
     font-family: cursive;
 }
@@ -49,22 +49,27 @@ section{
     background:rgba(0,255,0,.1);
     margin-top: 1rem;
     padding:.7rem 3rem;
+    border-radius: .5rem;
 }
 
 .btn:hover{
     background:var(--green);
     color:#fff;
-    border-radius: 5rem;
+}
+.container-card-icons {
+    margin-top: auto;
 }
 
 .heading{
     font-size: 3.5rem;
-    color:#ffffff;
+    color:#fff;
     text-align: center;
     text-transform: uppercase;
     padding:1rem;
 }
-
+.team .heading {
+    color: #333
+}
 header{
     position: fixed;
     top:0; left: 0;
@@ -81,10 +86,14 @@ header{
 header .logo{
     font-size: 2.5rem;
     color:#666;
+    /* observar alinhamento logo */
+    display: flex;
+    align-items: center;
 }
 
 header .logo span{
     color:var(--green);
+    margin-left: 12px;
 }
 
 header .navbar a{
@@ -112,7 +121,7 @@ header .navbar a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background:linear-gradient(90deg, rgba(0,0,0,.9), transparent), url(../images/home-bg.jpg) no-repeat;
+    background:linear-gradient(90deg, rgba(0,0,0,.9),  transparent), url(./images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -145,12 +154,16 @@ header .navbar a:hover{
 .icons-container .icons{
     width:30rem;
     margin:1rem;
-    padding:2rem 1rem;
+    padding:2rem 1.5rem;
     border-radius: .5rem;
     border:.1rem solid rgba(0,0,0,.1);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     text-align: center;
     background:#fff;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icons-container .icons:hover{
@@ -223,7 +236,7 @@ header .navbar a:hover{
 
 .project .box-container .box:hover .info{
     bottom:2rem;
-    transition-delay: .3s;
+    transition-delay: .05s;
 }
 
 .project .box-container .box .info h3{
@@ -347,7 +360,6 @@ header .navbar a:hover{
     border-radius: .5rem;
     margin:1rem;
     background:#fff;
-    padding: 1rem;
     text-align: center;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     height:35rem;
@@ -379,6 +391,7 @@ header .navbar a:hover{
 .team .box-container .box .info h3{
     font-size: 2.5rem;
     color:var(--green);
+    margin-top: 12px;
 }
 
 .team .box-container .box .info p{
@@ -493,6 +506,7 @@ header .navbar a:hover{
     box-shadow:  0 .5rem 1rem rgba(0,0,0,.1);
     overflow: hidden;
     background:#fff;
+    min-height: 480px;
 }
 
 .events .box-container .box img{
@@ -502,7 +516,10 @@ header .navbar a:hover{
 }
 
 .events .box-container .box .content{
-    padding:1.5rem;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
 }
 
 .events .box-container .box .content h3{
@@ -572,7 +589,7 @@ header .navbar a:hover{
 }
 
 .footer .credit{
-    padding:2rem 1rem;
+    padding:2rem 1.5rem;
     font-size: 2rem;
     color:#666;
     border-top: .1rem solid rgba(0,0,0,.1);
